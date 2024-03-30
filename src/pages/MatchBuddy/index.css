@@ -1,0 +1,187 @@
+/* index.css */
+
+/* Apply some reset styles */
+.match-buddy * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font-sizes and families according to your design */
+.match-buddy body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Adjust the container padding if needed to ensure no overlap with the navbar */
+.match-buddy .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px; /* Increased top padding */
+}
+
+/* Form styling */
+.match-buddy form {
+  padding: 20px;
+}
+
+/* Style for the page title */
+.match-buddy h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+/* You may also want to increase the size of the labels for consistency */
+.match-buddy label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px; /* Larger font size */
+  padding: 40px 32px; /* Increased padding */
+}
+
+
+.match-buddy select,
+.match-buddy textarea {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px; /* Larger font size */
+}
+
+
+.match-buddy .header {
+  display: flex;
+  justify-content: space-between; /* Positions the buttons on opposite sides */
+  padding: 1rem; /* Add some padding around the header */
+  max-width: 600px; /* Matches the form width */
+  margin: 0 auto; /* Centers the header */
+}
+
+.match-buddy .form-content {
+  padding: 20px;
+}
+
+/* Adjust padding for buttons to ensure they are not too large */
+/* .match-buddy button.back-button, .match-buddy .history-button { */
+.match-buddy .match-buddy .history-button {
+  padding: 0.5rem;
+  font-size: 1.5rem; /* Adjust font size if needed */
+  position: absolute;
+  top: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  background: transparent;
+  border: none;
+  margin: 0;
+  width: 20px; /* Smaller width */
+  height: 20px; /* Smaller height */
+
+}
+
+
+
+.match-buddy .history-button {
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  align-items: end; /* Center-align children */
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from text if needed */
+  color: inherit; /* Inherit text color from parent */
+  position: absolute;
+  top: 60px; /* 16px from the top */
+  right: 20px; /* 16px from the left */ 
+}
+
+/* Style for the history icon image for appropriate sizing */
+.match-buddy .history-button img {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  margin-bottom: 0.25rem; /* Space between the image and text */
+}
+
+/* Style for the text label below the image */
+.match-buddy .history-button span {
+  font-size: 0.75rem; /* Small text size for the label */
+  text-align: center; /* Center the text below the image */
+}
+
+
+.match-buddy .matching-history-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align vertically */
+  align-items: center; /* Align horizontally */
+  min-height: 100vh; /* At least full height of the viewport */
+  padding: 4rem 1rem; /* Add some padding */
+}
+
+.match-buddy .matching-history-list {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Maximum width */
+}
+
+.match-buddy .matching-history-item {
+  display: flex;
+  align-items: center; /* Align list items */
+  padding: 1rem;
+  border-bottom: 1px solid #ccc; /* Add a border to each item */
+  margin-bottom: 1rem; /* Add some space between the items */
+}
+
+.match-buddy .matching-history-avatar {
+  border-radius: 50%; /* Make the image round */
+  margin-right: 1rem; /* Add space after the image */
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.match-buddy .matching-history-info {
+  flex-grow: 1; /* Take available space */
+}
+
+.match-buddy .header-container {
+  justify-content: space-between; /* Spreads out the buttons and title */
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 2rem; /* Adds margin to the bottom */
+  padding: 0 1rem;
+}
+
+.match-buddy .header-title {
+  margin: 0; /* Removes default margin */
+  flex-grow: 1; /* Allows the title to grow and take up the flex space */
+  text-align: center;
+}
+
+.match-buddy.congrats-container {
+  background-color: #E6F7FF; /* Light blue background color */
+  background-image: url('./congrat_bg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* make all text under match buddy class Josefin Slab
+*/
+.match-buddy * {
+  font-family: 'Josefin Slab', serif;
+}
+
+.match-buddy .container .congrats-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px; /* Increased top padding */
+  background: transparent; /* Ensure container background is transparent */
+}

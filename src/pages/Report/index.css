@@ -1,0 +1,438 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Arial', sans-serif; */
+}
+
+.app-container {
+    max-width: 414px; /* Assuming a standard mobile width */
+    margin: auto;
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Slab', sans-serif;
+}
+
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d1e16;
+    
+}
+
+.app-header h1 {
+    color: #dfb258;
+    font-size: 1.5rem;
+    font-family: 'Josefin Slab';
+}
+
+.usage-report .card, .weekly-activity, .daily-statistics {
+    background: #f9f9f9;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.usage-report .card p {
+    color: #2d1e16;
+    background: #e3c98e;
+    /* border-radius: 10px; */
+    padding: 0.5rem;
+    margin:0;
+}
+
+.usage-report .card h2 {
+    color: #2d1e16;
+    background: #e3c98e;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin:0;
+}
+
+.weekly-activity h3 {
+    color: #2d1e16;
+    background: #e3c98e;
+    font-size: 1rem;
+    padding: 1rem;
+    margin:0;
+}
+
+.weekly-activity-card {
+    /* border: 2px  ; */
+    background: #e3c98e;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 16px;
+    background: #f9f9f9;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weekly-activity-card .card-header h2 {
+    color: #2d1e16;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin:0;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+
+.view-details {
+    background: none;
+    border: none;
+    color: #4A90E2;
+    cursor: pointer;
+}
+
+.statistics-card {
+
+    background: #f9f9f9;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.statistics-card .card-header h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.statistics-card .statistics  {
+    height: 15rem;
+    width: 15rem;
+}
+
+
+.statistics-card .chart-container {
+    display: flex;
+    align-items: flex-end;
+    height: 200px; /* Adjust height as needed */
+    margin-top: 20px;
+}
+
+.statistics-card .bar {
+    width: 20px; /* Adjust width as needed */
+    margin: 0 5px; /* Adjust spacing as needed */
+}
+
+
+.activity-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.chart-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #FFD54F, #FF4081, #64FFDA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.chart-placeholder .date {
+    position: absolute;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-list li {
+    margin-bottom: 2px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.dot-watching {
+    background-color: #FFD54F;
+}
+
+.dot-liking {
+    background-color: #FF4081;
+}
+
+.dot-chatting {
+    background-color: #64FFDA;
+}
+
+
+.pie-chart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        var(--slice-color1) var(--slice-offset1) var(--slice-offset1 + var(--slice-value1)),
+        var(--slice-color2) var(--slice-offset1 + var(--slice-value1)) var(--slice-offset1 + var(--slice-value1) + var(--slice-value2)),
+        var(--slice-color3) var(--slice-offset1 + var(--slice-value1) + var(--slice-value2)) var(--slice-offset1 + var(--slice-value1) + var(--slice-value2) + var(--slice-value3))
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.date {
+    position: absolute;
+    font-size: 0.7em;
+    color: #555;
+}
+
+/* Define the individual slices of the pie chart using CSS variables */
+.slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    background: var(--bg);
+    transform: rotate(calc(var(--offset) * 1deg)) translate3d(0,0,0);
+}
+
+.slice::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    background: inherit;
+    transform: rotate(calc(var(--value) * 3.6deg)) translate3d(0,0,0);
+}
+
+/* Add additional styles for .activity-list and .dot classes if needed */
+
+
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: #f0f0f0;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Additional styling for chart placeholders and buttons */
+.activity-chart, .statistics-chart {
+    background: #ececec;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #dfb258;
+    background-color: #2d1e16;
+    position: absolute;
+    left: 10px; 
+    top: 3%; 
+    transform: translateY(-50%); 
+}
+
+.back-button .hover{
+    /* border: none;
+    font-size: 1.5rem;
+    color: #2d1e16; */
+    background-color: #dfb258;
+}
+
+.back-button .selected {
+    background-color: #555; /* Different color for selected state */
+    border-color: #555;
+  }
+
+h1 {
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 414px) {
+    .app-container {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #e8f0fe;
+  }
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3px;
+    padding: 10px 0; 
+    background-color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+  }
+  .tab:hover {
+    background-color: #f0f0f0;
+  }
+  .active .date {
+    background-color: #54423a;
+    color: #fff;
+  }
+
+  .day-name {
+    width: 20px;
+    height: 10px;
+    line-height: 36px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center; /* This will vertically center the text */
+    justify-content: center; /* This will horizontally center the text */
+    border-radius: 10%;
+    transition: background-color 0.3s;
+  }
+
+  .date {
+    margin-top: 5%;
+    background-color: #877b74;
+    width: 36px;
+    height: 25px;
+    color: #fff;
+    line-height: 36px;
+    /* text-align: center; */
+    align-items: center; /* This will vertically center the text */
+    justify-content: center; /* This will horizontally center the text */
+    display: flex;
+    border-radius: 10%;
+    transition: background-color 0.3s;
+  }
+  .content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 10px;
+  }
+  .content.active {
+    display: block;
+    /* You would add your sliding effect with JavaScript or a CSS animation */
+  }
+
+  .tabs {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tab {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #f0f0f0;
+}
+
+.schedule-container {
+    position: relative;
+    height: 450px; 
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 80%;
+    border: #2d1e16;
+    overflow-y: auto;
+}
+
+.hour-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+
+.hour-label {
+    flex: 0 0 auto; /* Do not grow or shrink, based on content */
+    margin-right: 10px; /* Space between the label and the line */
+}
+
+.hour-line {
+    border-top: 1px solid #ccc;
+    flex-grow: 1; /* Take up the remaining space */
+    height: 1px; /* Set the line height (the border thickness) */
+}
+
+
+.events .event {
+    position: absolute;
+    width: 200px; /* 或者根据您的布局调整 */
+    background-color: #e3c98e;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 20%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* 更多样式 */
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

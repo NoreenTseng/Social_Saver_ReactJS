@@ -1,0 +1,79 @@
+.event-home-container {
+    /* padding: 20px; */
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns grid */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.category {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.category:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+.view-all-button {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d1e16;
+}
+
+.app-header h1 {
+    color: #dfb258;
+    font-size: 1.5rem;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #dfb258;
+    background-color: #2d1e16;
+}
+
+.category {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    overflow: hidden; /* This will ensure that the border-radius applies to images as well */
+    margin-bottom: 1rem; /* Space below each category */
+}
+
+.category-image {
+    width: 100%; /* Make image take full width of the container */
+    height: 130px; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+}
+
+.category-name {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2em; /* Adjust as needed */
+    position: relative; /* Position relative to the parent */
+    bottom: 0; /* Align to the bottom */
+}

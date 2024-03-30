@@ -1,0 +1,92 @@
+:root {
+    /* style guide: color */
+    --yellow: #e7b044;
+    --light-brown: #e8c885;
+    --very-dark-brown: #584139;
+    --brown-pod: #301d15;
+    --hurricane: #8a7a73;
+    --gainsboro: #d9d9d9;
+    /* colors used in design */
+    --dark-wood: #2d1e16;
+    --grey: #d9d9d9;
+}
+
+.App {
+    text-align: center;
+    color: #000;
+    font-family: Hina Mincho;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 15%;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+h1 {
+    color: #000;
+    font-family: Itim;
+    font-size: 2.753rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+h2 {
+    color: #000;
+    font-family: Josefin Slab;
+    font-size: 2.29181rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h3 {
+    color: #000;
+    font-family: Josefin Slab;
+    font-size: 1.88506rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    color: #000;
+    font-family: Hina Mincho;
+    font-size: 1.46619rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

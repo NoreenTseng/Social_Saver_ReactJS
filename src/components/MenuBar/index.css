@@ -1,0 +1,12 @@
+button.MuiButtonBase-root {
+    min-width: auto;
+    font-size: 0.75rem;
+}
+.menu-tab button {
+    color: #8a7a73;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
