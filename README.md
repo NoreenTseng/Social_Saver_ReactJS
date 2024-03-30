@@ -1,3 +1,6 @@
+# Social Saver Project
+#### A Team of 5 People
+
 # Style guide
 
 https://www.figma.com/file/faMRUWq1qvhTLxWLLSCd1f/SRID-Social-Media-Team?node-id=418%3A154&mode=dev
